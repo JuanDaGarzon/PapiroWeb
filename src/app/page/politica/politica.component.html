@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</title>
+  <style>
+    /* Estilos globales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Título principal */
+    h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    /* Párrafo de introducción */
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    /* Estilo para el visor de PDF */
+    pdf-viewer {
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo para los botones y links si los añades más tarde */
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</h1>
+    <p>Bienvenido. Aquí podrás leer nuestra política de privacidad y entender cómo protegemos tus datos personales.</p>
+    <pdf-viewer [src]="pdfSrc" [render-text]="true" [original-size]="false"
+      style="width: 800px; height: 900px"></pdf-viewer>
+  </div>
+
+</body>
+</html>
+
