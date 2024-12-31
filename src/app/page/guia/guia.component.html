@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +21,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
+      box-sizing: border-box;
     }
 
     /* Título principal */
@@ -45,28 +47,66 @@
       border: 2px solid #007bff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 800px;
+      /* Límite en dispositivos grandes */
+      height: 500px;
     }
 
-    /* Estilo para los botones y links si los añades más tarde */
+    /* Estilo para los botones y enlaces */
     a {
       color: #007bff;
       text-decoration: none;
       font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    /* Media Queries para dispositivos móviles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      pdf-viewer {
+        height: 400px;
+        /* Altura reducida en dispositivos pequeños */
+      }
+    }
+
+    /* Media Queries para pantallas extra pequeñas */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      pdf-viewer {
+        height: 300px;
+        /* Altura más compacta */
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <h1>GUÍA DIDÁCTICA</h1>
-    <p>En esta sección podrás encontrar la guía completa y el resumen de las políticas implementadas en el conjunto residencial. Asegúrate de leerlas detenidamente para conocer las normativas y procedimientos importantes.</p>
-    <pdf-viewer [src]="pdfSrc" [render-text]="true" [original-size]="false"
-      style="width: 800px; height: 900px"></pdf-viewer>
+    <p>En esta sección podrás encontrar la guía completa y el resumen de las políticas implementadas en el conjunto
+      residencial. Asegúrate de leerlas detenidamente para conocer las normativas y procedimientos importantes.</p>
+    <pdf-viewer [src]="pdfSrc" [render-text]="true" [original-size]="false"></pdf-viewer>
   </div>
 
 </body>
-</html>
 
+</html>
